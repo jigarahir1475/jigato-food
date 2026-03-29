@@ -90,9 +90,8 @@ API_KEY=your_api_key_here
 
 ## 📸 Screenshots
 
-> *(Add your screenshots here for better presentation)*
 
----
+
 
 ## 🚀 Future Improvements
 
