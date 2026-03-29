@@ -1,16 +1,7 @@
 <?php
 session_start();
 
-// ✅ InfinityFree Database Connection
-$servername = "sql211.infinityfree.com";   // MySQL Hostname
-$username   = "if0_40371874";              // MySQL Username
-$password   = "4UDfCeEYgN";                // MySQL Password (from InfinityFree panel)
-$database   = "if0_40371874_food_order";      // Replace _XXX with your actual database name
-
-$conn = new mysqli($servername, $username, $password, $database);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('config.php');
 
 // ✅ Get Restaurant Name
 $restaurant_name = $_GET['restaurant'] ?? '';

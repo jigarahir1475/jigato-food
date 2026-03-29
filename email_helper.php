@@ -1,7 +1,7 @@
 <?php
 function sendVerificationEmail($to, $otp) {
     // ⚠️ Enter your Brevo API key here (without spaces)
-   $apiKey = "YOUR_API_KEY_HERE";
+   $apiKey = "YOUR_API_KEY_HER";
 
     $senderEmail = "jigatofood@gmail.com";
     $senderName  = "JigatoFood";

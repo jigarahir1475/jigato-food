@@ -12,18 +12,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-// ✅ InfinityFree Database Connection
-$servername = "sql211.infinityfree.com";   // MySQL Hostname
-$username   = "if0_40371874";              // MySQL Username
-$password   = "4UDfCeEYgN";                // MySQL Password (from InfinityFree panel)
-$database   = "if0_40371874_food_order";   // ✅ Your InfinityFree database name
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-// ✅ Connection Check
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('config.php');
 
 // ✅ Fetch user info
 $user_id = $_SESSION['user_id'];

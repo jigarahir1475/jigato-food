@@ -1,18 +1,7 @@
 <?php
 session_start();
 
-// ✅ InfinityFree Database Connection
-$servername = "sql211.infinityfree.com";   // MySQL Hostname
-$username   = "if0_40371874";              // MySQL Username
-$password   = "4UDfCeEYgN";                // MySQL Password (from InfinityFree panel)
-$database   = "if0_40371874_food_order";   // ✅ Your actual InfinityFree database name
-
-$conn = new mysqli($servername, $username, $password, $database);
-
-// ✅ Connection Check
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include('config.php');
 
 // ✅ Redirect if not logged in
 if (!isset($_SESSION['user_id'])) {
@@ -273,7 +262,7 @@ button:disabled {
 
         <div class="qr-box" id="qr-box">
             <div id="qrcode"></div>
-            <p>Scan & Pay to <strong>jigloaayar@kotak811</strong></p>
+            <p>Scan & Pay to <strong>jigatofoog@upi</strong></p>
             <p>Amount: <strong>₹<?= number_format($total, 2) ?></strong></p>
             <div class="timer" id="timer">⏳ Payment time remaining: 03:00</div>
             <div id="error-msg">⚠️ Payment time out! Please choose another payment method.</div>
@@ -298,7 +287,7 @@ function showQR() {
     document.getElementById('qr-box').style.display = 'block';
     document.getElementById('error-msg').style.display = 'none';
     document.getElementById('qrcode').innerHTML = "";
-    const upiId = "jigloaayar@kotak811";
+    const upiId = "jigatofoog@upi";
     const name = "Jigato";
     const amount = <?= json_encode($total) ?>;
     const upiLink = `upi://pay?pa=${upiId}&pn=${name}&am=${amount}&cu=INR&tn=Order%20Payment`;
