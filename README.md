@@ -88,11 +88,6 @@ API_KEY=your_api_key_here
 
 ---
 
-## 📸 Screenshots
-
-
-
-
 ## 🚀 Future Improvements
 
 * 🔐 User authentication system
